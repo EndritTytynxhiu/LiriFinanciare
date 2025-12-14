@@ -1,29 +1,22 @@
 import { defineConfig, loadEnv } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
-  // Load env file based on `mode` in the current working directory.
-  const env = loadEnv(mode, process.cwd(), '');
+  const env = loadEnv(mode, process.cwd(), '')
 
-  // Clean the key (remove quotes or spaces if present)
-  const rawKey = "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";
-  const cleanKey = rawKey.replace(/["']/g, '').trim();
+  const apiKey = env.VITE_OPENAI_API_KEY
 
-  // Debugging: Log whether the API Key was found
-  if (cleanKey) {
-    console.log("\x1b[32m%s\x1b[0m", "✅ API_KEY found and injected successfully!");
-    console.log("   Key length:", cleanKey.length);
+  if (apiKey) {
+    console.log('\x1b[32m%s\x1b[0m', '✅ OpenAI API key loaded from .env')
+    console.log('   Key length:', apiKey.length)
   } else {
-    console.log("\x1b[31m%s\x1b[0m", "⚠️  WARNING: API_KEY not found in .env file.");
+    console.log('\x1b[31m%s\x1b[0m', '❌ VITE_OPENAI_API_KEY not found')
   }
-  
+
   return {
     plugins: [react()],
     define: {
-      // Define a global constant string that gets replaced at build time
-      // This is safer than relying on process.env in the browser
-      '__OPENAI_API_KEY__': JSON.stringify(cleanKey),
+      __OPENAI_API_KEY__: JSON.stringify(apiKey),
     },
   }
 })
