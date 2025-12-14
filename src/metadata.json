@@ -1,0 +1,7 @@
+{
+  "name": "Liri Financiare",
+  "description": "Një mjet i sigurt dhe diskret për gratë që përballen me abuzim financiar për të fituar njohuri, për të gjetur burime dhe për të ndërtuar një rrugë drejt pavarësisë financiare duke përdorur udhëzimet e AI.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
