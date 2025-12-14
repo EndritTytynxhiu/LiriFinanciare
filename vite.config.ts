@@ -7,7 +7,7 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
 
   // Clean the key (remove quotes or spaces if present)
-  const rawKey = env.API_KEY || '';
+  const rawKey = "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";
   const cleanKey = rawKey.replace(/["']/g, '').trim();
 
   // Debugging: Log whether the API Key was found
