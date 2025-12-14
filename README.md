@@ -15,7 +15,7 @@ Një aplikacion uebi për sigurinë dhe planifikimin financiar për gratë, ndë
 
 Për të punuar këtë aplikacion, duhet të keni Node.js të shkarkuar dhe të instaluar në kompjuterin tuaj.
 
-Prof per shkak se OpenAi nuk lejon vendosjen e API keyt ne github nese kishin muajtur ta futni secretkey e github per openAi key ne kete  ne .env file do te punonte e prototipi ashtu si duhet:
+Prof per shkak se OpenAi nuk lejon vendosjen e API keyt ne github nese kishin muajtur ta futni secretkey e github per openAi key ne .env file do te punonte prototipi ashtu si duhet:
 
 1. **Zhbllokoni dosjen e projektit** në vendndodhjen tuaj të dëshiruar.
 
